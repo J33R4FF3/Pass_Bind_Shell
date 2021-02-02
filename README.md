@@ -6,6 +6,6 @@ The desired shell, port and password can be configured withing the arguments arr
 
 ## Compile
 
-'''bash
+```bash
 gcc Pass_Bind_Shell.c -o Filename
-'''
+```
