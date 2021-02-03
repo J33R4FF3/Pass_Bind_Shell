@@ -4,10 +4,10 @@ Pass_Bind_Shell is for use on Linux and will spawn a simple bind shell on the vi
 
 The desired shell, port and password can be configured within the arguments array.
 
-For more information on the inner workings of the code, please read the blog [here](https://j33r4ff3.github.io/blog/Creating-TCP-Bind-Shell-with-C_2/).
+For more information on the inner workings of the code, please read the blog [here](https://j33r4ff3.github.io/blog/Creating-TCP-Bind-Shell-with-C).
 
 ## Compile
 
 ```bash
-gcc Pass_Rev_Shell.c -o Filename
+gcc Pass_Bind_Shell.c -o Filename
 ```
