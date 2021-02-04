@@ -11,3 +11,8 @@ For more information on the inner workings of the code, please read the blog [he
 ```bash
 gcc Pass_Bind_Shell.c -o Filename
 ```
+or
+```bash
+nasm -felf64 Pass_Bind_Shell.nasm -o ObjectFile_Filename.o
+ld ObjectFile_Filename.o -o Executable_Filename
+```
