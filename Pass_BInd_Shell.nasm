@@ -56,7 +56,6 @@ _start:
         xor rax, rax
 
         push r10
-        push r11
         mov rsi, rsp
 
         mov rdx, 16
@@ -85,7 +84,7 @@ _start:
         syscall
 
         ; change as needed
-        pass: db "16bytessssss"
+        pass: db "8bytesss"
 
 exit:
         mov rax, 60
