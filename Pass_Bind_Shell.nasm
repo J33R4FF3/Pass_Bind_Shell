@@ -4,7 +4,8 @@ section .text
 
 _start:
 
-
+        xor rbx, rbx
+        xor rsi, rsi
         mov rax, 41
         mov rdi, 2
         mov rsi, 1
